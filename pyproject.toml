@@ -1,0 +1,11 @@
+[project]
+name = "cchess-board"
+version = "0.3.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cchess>=1.25.5",
+    "onnxruntime>=1.24.1",
+    "opencv-python>=4.0",
+]
