@@ -22,14 +22,13 @@ def labels_to_fen(cell_labels):
                 if fench == '.':
                     continue
                 else:    
-                    board.put_fench(fench, (8-col, row))
-                    if (fench == 'K') and (row >= 6):
-                        is_flip = True    
+                    board.put_fench(fench, (col, 9-row))
+                    if (fench == 'K') and (row < 3):
+                        is_flip = True 
         if is_flip:
-            b = board.flip()
-            board = b.mirror()
-        
-        return board.to_fen()
+            board = board.flip()
+            
+        return board.to_fen(), is_flip
         
     
 #-----------------------------------------------------#
